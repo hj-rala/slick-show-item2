@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <title> new document </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8" />
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="language" content="ko" />
+
+  
+<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="layout.css" />
+<link rel="stylesheet" type="text/css" href="../slick.css" />
+<!-- <link rel="stylesheet" type="text/css" href="../slick-theme.min.css" /> -->
+
+<script type="text/javascript" src="../../js/jquery.min.js"></script>
+<script type="text/javascript" src="../../js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="../slick.js"></script>
+
+
+<style type="text/css">
+.mainWrap {position:relative; width:100%; overflow:hidden;}
+.bgVideo {position:relative; z-index:1; width:100%; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); }
+.bgVideo video {width:177.77777778vh; min-width:100%; height:100%; min-height:56.25vw;}
+
+#mainSlide {z-index:2;}
+#mainSlide .msSlide01 {background:none;}
+#mainSlide .msSlide02 {background:none;}
+#mainSlide .msSlide03 {background:none;}
+#mainSlide .msSlide04 {background:none;}
+#mainSlide .layoutBox {max-width:1200px; width:auto; margin:0 auto; }
+.item {opacity:0; position:absolute;}
+.msSlide01 .simg01 {top:50px;left:0; margin-top:-900px;}
+.msSlide01 .simg02 {top:150px;right:0; margin-top:900px;}
+.msSlide01 .simg03 {top:300px;right:0; margin-top:900px;transition-timing-function: ease-in-out;}
+.msSlide02 .simg01 {top:150px; right:0; margin-top:100px;}
+.msSlide02 .simg02 {top:150px;left:0; margin-top:-900px;}
+.msSlide02 .simg03 {top:300px; left:0; margin-top:-900px;}
+
+/* 오토플레이 버튼 */
+.slideWrap {position:relative;}
+.slideWrap .s-autoplay-btn {width:12px;height:12px;position:absolute;left:0;bottom:15px;z-index:50;}
+.slideWrap[data-slick-autoplay-status="Y"] .s-autoplay-btn {background:url('https://kimyang-sun.github.io/pf-img/samsung-img/new-home-ico-pause-black.svg') no-repeat;background-size:contain;}
+.slideWrap[data-slick-autoplay-status="N"] .s-autoplay-btn {background:url('https://kimyang-sun.github.io/pf-img/samsung-img/new-home-ico-play-black.svg') no-repeat;background-size:contain;}
+.slideWrap .slide-dummy {position:absolute;top:0;left:0;width:100%;height:90%;}
+
+.buttons {position:relative; z-index:100;}
+
+footer {width:100%; height:180px; background:#efefef;}
+
+</style>
+
+
+</head>
+<body>
+
+
+<div class="mainWrap">
+	<div class="bgVideo">
+		<video class="videoArea" loop="" muted="" autoplay="">
+			<source src="http://www.acebed.com/video/main0116.mp4" type="video/mp4">
+			<source src="http://www.acebed.com/video/main0116.webm" type="video/webm">
+		</video>
+	</div>
+	
+	<div class="slideWrap">
+		<!-- main slide -->
+		<div id="mainSlide">
+			<div class="msSlide01">
+				<div class="layoutBox">
+					<div class="simg01 item"><img src="img/tit_visual02.png" alt="" /></div>
+					<div class="simg02 item"><img src="img/txt_visual02_01.png" alt="" /></div>
+					<div class="simg03 item"><img src="img/txt_visual02_02.png" alt="" /></div>
+				</div>
+			</div>
+		
+			<div class="msSlide02">
+				<div class="layoutBox">
+					<div class="simg01 item"><img src="img/img_visual07.png" alt="" /></div>
+					<div class="simg02 item"><img src="img/txt_visual07_01.png" alt="" /></div>
+					<div class="simg03 item"><img src="img/txt_visual07_02.png" alt="" /></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //main slide -->
+
+	
+		<div class="buttons">
+			<button class="pause">Pause</button>
+			<button class="play">Play</button>
+		</div>
+</div>
+
+<footer>
+	footer 
+</footer>
+
+
+<script type="text/javascript">
+$(function(){
+
+$('.pause').on('click', function() {
+	$('#mainSlide').slick('slickPause');
+});
+
+$('.play').on('click', function() {
+	$('#mainSlide').slick('slickPlay');
+});
+
+
+});
+</script>
+
+
+
+
+<script type="text/javascript" src="../transit.js"></script>
+<script type="text/javascript" src="main2.js"></script>
+ </body>
+</html>
